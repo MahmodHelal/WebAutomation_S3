@@ -12,6 +12,8 @@ public class HomePage {
     By checkBoxLocator = By.linkText("Checkboxes");
     By dropDownLocator =By.linkText("Dropdown");
 
+    By addRemoveElementsLocator = By.linkText("Add/Remove Elements");
+
 
 
     public HomePage(WebDriver driver){
@@ -36,6 +38,14 @@ public class HomePage {
         driver.findElement(dropDownLocator).click();
         return new DropdownPage(driver);
     }
+
+
+    public AddRemovePage clickAddRemoveElementsLink(){
+        driver.findElement(addRemoveElementsLocator).click();
+        return new AddRemovePage(driver);
+    }
+
+
 
 
 

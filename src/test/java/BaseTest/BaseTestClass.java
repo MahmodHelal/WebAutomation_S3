@@ -14,6 +14,7 @@ public class BaseTestClass {
     protected SecureAreaPage secureAreaPage;
     protected CheckboxPage checkboxPage;
     protected DropdownPage dropdownPage;
+    protected AddRemovePage addRemovePage;
 
     @BeforeClass
     public void setup(){
@@ -27,9 +28,9 @@ public class BaseTestClass {
         driver.get("https://the-internet.herokuapp.com/");
     }
 
-    @AfterClass
+/*    @AfterClass
     public void tearDown(){
         driver.quit();
-    }
+    }*/
 
 }
