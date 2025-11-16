@@ -1,9 +1,6 @@
 package BaseTest;
 
-import Pages.CheckboxPage;
-import Pages.FormAuthPage;
-import Pages.HomePage;
-import Pages.SecureAreaPage;
+import Pages.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
@@ -16,6 +13,7 @@ public class BaseTestClass {
     protected FormAuthPage formAuthPage;
     protected SecureAreaPage secureAreaPage;
     protected CheckboxPage checkboxPage;
+    protected DropdownPage dropdownPage;
 
     @BeforeClass
     public void setup(){

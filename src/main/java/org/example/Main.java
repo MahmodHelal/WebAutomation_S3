@@ -29,7 +29,7 @@ public class Main {
         * 1- try by text
         * 2- try by index
         * 3- try by value
-        * 4- validate option is selected "bonus"
+        * 4- validate option is selected "bonus" access element already selected by contain text validate is selected
         * */
 
 
