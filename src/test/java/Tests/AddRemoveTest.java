@@ -17,9 +17,8 @@ public class AddRemoveTest extends BaseTestClass {
 
 
 
-        addRemovePage.clickDeleteButton();
-        addRemovePage.clickDeleteButton();
-        addRemovePage.clickDeleteButton();
+        addRemovePage.clickDeleteButton(3);
+
 
 
 

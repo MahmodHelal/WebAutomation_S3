@@ -22,18 +22,18 @@ public class AddRemovePage {
         driver.findElement(AddButtonLocator).click();
     }
 
-    public void clickDeleteButton(){
+    public void clickDeleteButton(int count){
         List<WebElement> deleteButtons = driver.findElements(deleteButtonLocator);
 
-        for (int i =1 ; i <= deleteButtons.size(); i++){
+        if (count <= deleteButtons.size()){
+        for (int i =1 ; i <= count; i++){
             deleteButtons.get(i).click();
         }
-
-
-        for (WebElement button : deleteButtons){
-            button.click();
+        }else {
+            System.out.println("Wrong count");
         }
-        driver.findElement(deleteButtonLocator).click();
+
+
     }
 
 

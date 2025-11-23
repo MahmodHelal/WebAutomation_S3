@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Smoke Tests" verbose="1">
+    <test name="Positive Scenarios">
+        <classes>
+            <class name="Tests.AddRemoveTest"/>
+        </classes>
+    </test>
+    
+    <test name="Sanity Test">
+        <classes>
+            <class name="Tests.DynamicTest.Example1Test"/>
+            
+            <class name="Tests.DropDownTest">
+                <methods>
+                    <include name="validateOption1IsSelected"/>
+                </methods>
+            </class>
+        </classes>
+        
+        
+    </test>
+
+
+</suite>

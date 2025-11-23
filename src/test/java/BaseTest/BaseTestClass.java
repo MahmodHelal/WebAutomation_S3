@@ -1,6 +1,7 @@
 package BaseTest;
 
 import Pages.*;
+import Pages.DynamicPackage.DynamicLoadingPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
@@ -15,10 +16,13 @@ public class BaseTestClass {
     protected CheckboxPage checkboxPage;
     protected DropdownPage dropdownPage;
     protected AddRemovePage addRemovePage;
-
+    protected DynamicLoadingPage dynamicLoadingPage;
+    protected AlertsPage alertsPage;
     @BeforeClass
     public void setup(){
         driver = new FirefoxDriver();
+ /*       // implicit Wait
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));*/
         driver.manage().window().maximize();
         homePage = new HomePage(driver);
     }
@@ -28,9 +32,9 @@ public class BaseTestClass {
         driver.get("https://the-internet.herokuapp.com/");
     }
 
-/*    @AfterClass
+    @AfterClass
     public void tearDown(){
         driver.quit();
-    }*/
+    }
 
 }

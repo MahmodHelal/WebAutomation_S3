@@ -1,8 +1,8 @@
 package Pages;
 
+import Pages.DynamicPackage.DynamicLoadingPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class HomePage {
     WebDriver driver;
@@ -13,6 +13,9 @@ public class HomePage {
     By dropDownLocator =By.linkText("Dropdown");
 
     By addRemoveElementsLocator = By.linkText("Add/Remove Elements");
+    By dynamicLoadingLocator = By.linkText("Dynamic Loading");
+
+    By alertsLocator = By.linkText("JavaScript Alerts");
 
 
 
@@ -44,6 +47,17 @@ public class HomePage {
         driver.findElement(addRemoveElementsLocator).click();
         return new AddRemovePage(driver);
     }
+
+    public DynamicLoadingPage clickDynamicLoadingLink(){
+        driver.findElement(dynamicLoadingLocator).click();
+        return new DynamicLoadingPage(driver);
+    }
+
+    public AlertsPage clickAlertsLink(){
+        driver.findElement(alertsLocator).click();
+        return new AlertsPage(driver);
+    }
+
 
 
 

@@ -6,10 +6,11 @@ import org.testng.annotations.Test;
 public class DropDownTest extends BaseTestClass {
 
     @Test
-    public void validateOption1IsSelected(){
+    public void validateOption1IsSelected() throws InterruptedException {
        dropdownPage= homePage.clickDropdownLink();
        dropdownPage.selectOptionOne();
        dropdownPage.elementIsSelected("Option 1");
+       Thread.sleep(2000);
 
     }
 
